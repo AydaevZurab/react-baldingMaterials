@@ -3,7 +3,20 @@ function App() {
   return (
     <div className="wrapper">
       <div className="overlay">
-        <div className="drawer"></div>
+        <div className="drawer">
+          <h2 className="cartName">Корзина</h2>
+
+          <div className="cartItem">
+            <img className="cartItemImg" width={70} height={60} src="img/materials/2.jpg" alt="Materials" />
+            <div>
+              <p>Перфоратор</p>
+              <b>15 999 руб.</b>
+            </div>
+            <div className="btn-remove">
+              <img src="img/remove.png" alt="Remove" />
+            </div>
+          </div>
+        </div>
       </div>
       <header>
         <div className="headerLeft">
@@ -22,20 +35,20 @@ function App() {
             <img width={18} height={18} src="img/user.png" />
           </div>
         </div>
-      </header> 
+      </header>
       <div className="content">
         <div className="content-search">
           <h1 className="contentH1">Все материалы</h1>
           <div className="search-block">
             <img src="img/search.png" alt="Search" />
-            <input className="searchInput" placeholder="Поиск..." /> 
+            <input className="searchInput" placeholder="Поиск..." />
           </div>
         </div>
 
         <div className="materials">
           <div className="card">
             <div className="favorite">
-            <img src="img/liked.png" alt="liked" />
+              <img src="img/liked.png" alt="liked" />
             </div>
             <div className="cardMarginLeft">
               <img className="imageCenter" width={133} height={112} src="img/materials/1.jpeg" alt="Materials" />
@@ -45,9 +58,9 @@ function App() {
                   <div className="price">Цена:</div>
                   <b>10 999 руб.</b>
                 </div>
-                <button className="button">
-                  <img width={11} height={11} src="img/unplus.png" alt="Plus" />
-                </button>
+                <div className="button">
+                  <img src="img/unplus.png" alt="Plus" />
+                </div>
               </div>
             </div>
           </div>
@@ -60,9 +73,9 @@ function App() {
                   <div className="price">Цена:</div>
                   <b>15 999 руб.</b>
                 </div>
-                <button className="button">
-                  <img width={11} height={11} src="img/unplus.png" alt="Plus" />
-                </button>
+                <div className="button">
+                  <img src="img/added.png" alt="Plus" />
+                </div>
               </div>
             </div>
           </div><div className="card">
@@ -74,9 +87,9 @@ function App() {
                   <div className="price">Цена:</div>
                   <b>200 руб.</b>
                 </div>
-                <button className="button">
-                  <img width={11} height={11} src="img/unplus.png" alt="Plus" />
-                </button>
+                <div className="button">
+                  <img src="img/unplus.png" alt="Plus" />
+                </div>
               </div>
             </div>
           </div>
@@ -89,9 +102,9 @@ function App() {
                   <div className="price">Цена:</div>
                   <b>400 руб.</b>
                 </div>
-                <button className="button">
-                  <img width={11} height={11} src="img/unplus.png" alt="Plus" />
-                </button>
+                <div className="button">
+                  <img src="img/unplus.png" alt="Plus" />
+                </div>
               </div>
             </div>
           </div>
