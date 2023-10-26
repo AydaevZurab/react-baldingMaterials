@@ -5,17 +5,44 @@ function App() {
       <div className="overlay">
         <div className="drawer">
           <h2 className="cartName">Корзина</h2>
-
-          <div className="cartItem">
-            <img className="cartItemImg" width={70} height={60} src="img/materials/2.jpg" alt="Materials" />
-            <div>
-              <p>Перфоратор</p>
-              <b>15 999 руб.</b>
+          <div className="items">
+            <div className="cartItem">
+              <img className="cartItemImg" width={70} height={60} src="img/materials/2.jpg" alt="Materials" />
+              <div>
+                <p>Перфоратор</p>
+                <b>15 999 руб.</b>
+              </div>
+              <div className="btn-remove">
+                <img src="img/remove.png" alt="Remove" />
+              </div>
             </div>
-            <div className="btn-remove">
-              <img src="img/remove.png" alt="Remove" />
+            <div className="cartItem">
+              <img className="cartItemImg" width={70} height={60} src="img/materials/3.jpg" alt="Materials" />
+              <div>
+                <p>Ключ</p>
+                <b>200 руб.</b>
+              </div>
+              <div className="btn-remove">
+                <img src="img/remove.png" alt="Remove" />
+              </div>
             </div>
           </div>
+           <ul className="cartTotalBlock">
+            <li>
+              <span>Итого:</span>
+              <div></div>
+              <b>16 199 руб.</b>
+            </li>
+            <li>
+              <sapn>Налог 5%:</sapn>
+              <div></div>
+              <b>809 руб.</b>
+            </li>
+           </ul>
+           <button className="oreder-btn">
+            <p>Оформить заказ</p>
+            <div>➜</div>
+           </button>
         </div>
       </div>
       <header>
@@ -88,7 +115,7 @@ function App() {
                   <b>200 руб.</b>
                 </div>
                 <div className="button">
-                  <img src="img/unplus.png" alt="Plus" />
+                  <img src="img/added.png" alt="Plus" />
                 </div>
               </div>
             </div>
