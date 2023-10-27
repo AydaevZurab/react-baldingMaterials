@@ -39,9 +39,9 @@ function App() {
               <b>809 руб.</b>
             </li>
            </ul>
-           <button className="oreder-btn">
+           <button className="greenBtn">
             <p>Оформить заказ</p>
-            <div>➜</div>
+            <img src="img/strelka.png"/>
            </button>
         </div>
       </div>

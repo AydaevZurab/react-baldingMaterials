@@ -5,7 +5,7 @@ body {
   background-color: #e5f4ff;
 }
 
-* {
+*    {
   font-family: "Inter", system-ui;
 }
 
@@ -217,9 +217,11 @@ b {
 .items {
   margin: 0 15px;
   flex: 1;
+  overflow: auto;
+  margin-bottom: 25px;
 }
 
-.oreder-btn {
+.greenBtn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -231,19 +233,30 @@ b {
   font-size: 16px;
   width: 325px;
   height: 55px;
-  transition: transform 0.3s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
 
   p {
     margin-left: 30px;
   }
 
-  div {
+  img {
     font-size: 20px;
-    margin-bottom: 1px;
-    margin-left: 20px;
-  }
+    margin-bottom: px;
+    margin-left: 40px;
+    transition: transform 0.15s ease-in-out;
+  }   
 }
 
-.oreder-btn:hover{
-  transform: translateY(-2px);
+.greenBtn:hover{
+  img{
+    transform: translateX(5px);
+  } 
+}
+
+.greenBtn:hover{
+  background-color: lighten(#9DD458, 5%);
+}
+
+.greenBtn:active{
+  background-color: darken(#9DD458, 5%);
 }
