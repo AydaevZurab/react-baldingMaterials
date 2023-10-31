@@ -5,7 +5,7 @@ body {
   background-color: #e5f4ff;
 }
 
-*    {
+*{
   font-family: "Inter", system-ui;
 }
 
@@ -159,6 +159,19 @@ b {
   right: 0;
   background: #ffffff;
   box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+}
+
+.cartNameBlock{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  
+  div {
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
 }
 
 .cartName {
