@@ -38,7 +38,7 @@ function Cart() {
               <b>16 199 руб.</b>
             </li>
             <li>
-              <sapn>Налог 5%:</sapn>
+              <span>Налог 5%:</span>
               <div></div>
               <b>809 руб.</b>
             </li>
@@ -48,7 +48,7 @@ function Cart() {
             <img src="img/strelka.png" />
           </button>
         </div>
-      </div>
+      </div>    
     )
 };
 

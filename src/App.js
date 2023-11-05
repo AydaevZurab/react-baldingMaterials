@@ -4,6 +4,11 @@ import Card from "./components/Card";
 import Cart from "./components/Cart";
 import Header from "./components/Header";
 
+const arr = [{
+  name: "Угловая шлифмашина",
+  price: 10999
+}];
+
 function App() {
   return (
     <div className="wrapper">
@@ -18,7 +23,9 @@ function App() {
           </div>
         </div>
         <div className="materials">
-          <Card />
+          {arr.map(() => (
+            <Card/>
+          ))}       
         </div>
       </div>
     </div>
