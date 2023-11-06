@@ -6,8 +6,25 @@ import Header from "./components/Header";
 
 const arr = [{
   name: "Угловая шлифмашина",
-  price: 10999
-}];
+  price: 10999,
+  imageUrl: "img/materials/1.jpeg",
+},
+{
+  name: "Перфаратор",
+  price: 19600,
+  imageUrl: "img/materials/2.jpg",
+},
+{
+  name: "Гаичный Ключ",
+  price: 560,
+  imageUrl: "img/materials/3.jpg",
+},
+{
+  name: "Плоскогубцы",
+  price: 1200,
+  imageUrl: "img/materials/4.jpg",
+},
+];
 
 function App() {
   return (
@@ -23,9 +40,15 @@ function App() {
           </div>
         </div>
         <div className="materials">
-          {arr.map(() => (
-            <Card/>
-          ))}       
+
+          {arr.map((obj) => (
+            <Card
+              name={obj.name}
+              price={obj.price}
+              imageUrl={obj.imageUrl}
+            />
+          ))}
+
         </div>
       </div>
     </div>
