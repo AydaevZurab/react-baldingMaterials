@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
+
 function Cart({items = [], onClickClose}) {
+
   return (
     <div className="overlay">
       <div className="drawer">
@@ -17,7 +19,7 @@ function Cart({items = [], onClickClose}) {
                 <p>{obj.name}</p>
                 <b>{obj.price} руб.</b>
               </div>
-              <div className="btn-remove">
+              <div className="btn-remove" onClick={''}>
                 <img src="img/remove.png" alt="Remove" />
               </div>
             </div>
