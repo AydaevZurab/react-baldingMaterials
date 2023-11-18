@@ -8,7 +8,7 @@ function Cart({items = [], onClickClose}) {
         <div className="cartNameBlock">
           <h2 className="cartName">Корзина</h2>
           <div onClick={onClickClose}>
-            <img src="img/remove.png" alt="Remove" />
+            <img src="img/remove.png" alt="Close" />
           </div>
         </div>
         <div className="items">

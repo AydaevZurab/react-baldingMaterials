@@ -9,6 +9,7 @@ import Header from "./components/Header";
 function App() {
   const [items, setItems] = React.useState([])
   const [cartItems, setCartItems] = React.useState([])
+  const [searchValue, setSearchValue] = React.useState('')
   const [openedCart, setCartOpened] = React.useState(false)
 
   React.useEffect(() => {
@@ -25,23 +26,32 @@ function App() {
     setCartItems(prew => [...prew, obj])
   }
 
+  const onChangeSearchInput = (event) => {
+    setSearchValue(event.target.value) 
+  }
+
   return (
     <div className="wrapper">
       {openedCart ? <Cart items={cartItems} onClickClose = {() => setCartOpened(false)} /> : null}
       <Header onClickCart = {() => setCartOpened(true)} />
       <div className="content">
         <div className="content-search">
-          <h1 className="contentH1">Все материалы</h1>
+        <h1 className="contentH1">{searchValue ? `Поиск по запросу - ${searchValue}` : 'Все материалы'}</h1>
           <div className="search-block">
             <img src="img/search.png" alt="Search" />
-            <input className="searchInput" placeholder="Поиск..." />
+            {searchValue &&  <div onClick={() => setSearchValue('')}>
+              <img src="img/remove.png" alt="Clear" />
+            </div>}
+            <input onChange={onChangeSearchInput} value={searchValue} className="searchInput" placeholder="Поиск..." />
           </div>
         </div>
         <div className="materials">
 
-          {items.map((item) => (
+          {items
+          .filter((item) => item.name.toLowerCase().includes(searchValue.toLowerCase()))
+          .map((item, index) => ( 
             <Card
-              key={item.name}
+              key={index}
               name={item.name}
               price={item.price}
               imageUrl={item.imageUrl}
